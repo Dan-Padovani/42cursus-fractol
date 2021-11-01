@@ -6,12 +6,11 @@
 /*   By: dpadovan <dpadovan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 13:30:54 by dpadovan          #+#    #+#             */
-/*   Updated: 2021/10/28 22:56:47 by dpadovan         ###   ########.fr       */
+/*   Updated: 2021/11/01 11:12:41 by dpadovan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include "string.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

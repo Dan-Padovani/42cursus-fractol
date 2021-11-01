@@ -6,15 +6,16 @@
 /*   By: dpadovan <dpadovan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 21:20:48 by dpadovan          #+#    #+#             */
-/*   Updated: 2021/10/31 00:34:55 by dpadovan         ###   ########.fr       */
+/*   Updated: 2021/11/01 10:50:24 by dpadovan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-//Function to verify every pixel one by one and calculate viewport
-//Pointer to function as required (Mandelbrot or Julia)
-//Function to print the pixel
+/*
+*	Function to verify every pixel one by one and calculate viewport
+*	Pointer to function as required (Mandelbrot, Julia or Burning Ship)
+*/
 
 void	ft_coords(t_vars *vars)
 {
@@ -33,7 +34,6 @@ void	ft_coords(t_vars *vars)
 	}
 }
 
-//Function to initialize min and max of virtual coordinates
 void	ft_set_limits(t_vars *vars)
 {
 	if (vars->fract.fract_number == 1)
@@ -49,12 +49,5 @@ void	ft_set_limits(t_vars *vars)
 		vars->coord.x_vmin = -2.0;
 		vars->coord.y_vmax = 2.0;
 		vars->coord.y_vmin = -2.0;
-	}
-	else if (vars->fract.fract_number == 3)
-	{
-		vars->coord.x_vmax = 2.0;
-		vars->coord.x_vmin = -2.0;
-		vars->coord.y_vmax = 2.0;
-		vars->coord.y_vmin = -2.0;
-	}
+	}	
 }

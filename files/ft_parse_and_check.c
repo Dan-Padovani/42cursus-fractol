@@ -6,7 +6,7 @@
 /*   By: dpadovan <dpadovan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:16:21 by dpadovan          #+#    #+#             */
-/*   Updated: 2021/10/27 22:24:47 by dpadovan         ###   ########.fr       */
+/*   Updated: 2021/11/01 10:13:35 by dpadovan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	ft_check_args(int argc, char **argv, t_vars *vars)
 			vars->fract.julia_px = ft_atof(argv[2]);
 			vars->fract.julia_py = ft_atof(argv[3]);
 			vars->ft_calc = &ft_julia_calc;
-			vars->fract.fract_number = 3;
+			vars->fract.fract_number = 2;
 		}
 		else
 			ft_error_msg();

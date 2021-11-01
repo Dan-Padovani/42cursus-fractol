@@ -6,11 +6,18 @@
 /*   By: dpadovan <dpadovan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 20:19:26 by dpadovan          #+#    #+#             */
-/*   Updated: 2021/10/27 21:16:09 by dpadovan         ###   ########.fr       */
+/*   Updated: 2021/11/01 10:45:35 by dpadovan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+/*
+*	My hook function from minilibx to call the events on pressed buttons
+*	ESC to close the window
+*	R to reset and set original limits of the image
+*	Arrow UP DOWN RIGHT LEFT to move the image
+*/
 
 int	ft_key_hook(int keycode, t_vars *vars)
 {
@@ -19,7 +26,6 @@ int	ft_key_hook(int keycode, t_vars *vars)
 
 	delta_x = vars->coord.x_vmax - vars->coord.x_vmin;
 	delta_y = vars->coord.y_vmax - vars->coord.y_vmin;
-	printf("%d\n", keycode);
 	if (keycode == ESC)
 		ft_close_clean(vars);
 	if (keycode == R)
@@ -35,7 +41,6 @@ int	ft_key_hook_scroll(int keycode, int x, int y, t_vars *vars)
 		ft_zoom(vars, x, y, keycode);
 	if (keycode == ZOOM_OUT)
 		ft_zoom(vars, x, y, keycode);
-	printf("Position x = %d Position y = %d tecla = %d\n", x, y, keycode);
 	ft_coords(vars);
 	mlx_put_image_to_window(vars->img.mlx, vars->img.mlx_win,
 		vars->img.img, 0, 0);
